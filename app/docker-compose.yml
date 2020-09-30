@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+
+  bristolunch:
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    volumes:
+    - ./product:/usr/src/app
+    ports:
+    - 5001:80
+  db:
+    image: postgres:13.0
+    environment:
+    - USER=ash
+    - PASSWORD=password123
+    

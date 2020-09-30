@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <title>Add a New Game</title>
+    </head>
+    <body>
+        <a href="about">About Bristolunch</a>
+        <br>
+        <a href="add_details">Add Details</a>
+        <br>
+        <a href="deals">Today's Deals</a>
+        <br>
+        <br>
+        <h1 style="font-size:50px;">Add Details</h1>
+            
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+            <form method="POST" name="detailform">
+                Name <input type="text" name="name">
+            <br>
+            <br>
+                Address <input type="text" name="address">
+            <br>
+            <br>
+                <label for="cuisine">Cuisine </label>
+                <select name="cuisine" id="cuisine">
+                    <option value="African">African</option>   
+                    <option value="Asian">Asian</option>   
+                    <option value="British">British</option>
+                    <option value="Burgers">Burgers</option>
+                    <option value="Cafe">Cafe</option>
+                    <option value="Chinese">Chinese</option>   
+                    <option value="Carribean">Carribean</option>
+                    <option value="Greek">Greek</option>
+                    <option value="Halal">Halal</option>   
+                    <option value="International">International</option>  
+                    <option value="Indian">Indian</option>    
+                    <option value="Italian">Italian</option>   
+                    <option value="Japanese">Japanese</option>   
+                    <option value="Korean">Korean</option>   
+                    <option value="Lebanese">Lebanese</option>   
+                    <option value="Mediterranean">Mediterranean</option>   
+                    <option value="Mexican">Mexican</option> 
+                    <option value="Pizza">Pizza</option>
+                    <option value="Street_Food">Street_Food</option>  
+                    <option value="Vegetarian">Other</option>
+                    <option value="Other">Other</option>                       
+                </select>
+            <br>
+            <br>
+                <label for="price_range">Price Range </label>
+                <select name="price_range" id="price_range">
+                    <option value="£-££">£-££</option>   
+                    <option value="££-£££">££-£££</option>   
+                    <option value="£££-££££">£££-££££</option>
+                    <option value="£££££+">£££££+</option>
+            <br>
+            <br>
+                Website <input type="text" name="webpage">
+            <br>
+            <br>
+                Opening Hours <input type="text" name="opening_times">
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </body>
+</html>
