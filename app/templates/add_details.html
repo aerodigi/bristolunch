@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="static/style.css">
-        <title>Add a New Game</title>
+        <title>Add Details</title>
     </head>
-    <body>
-        <a href="about">About Bristolunch</a>
+    <body style= "background-color:#3b5773">
+        <a href="/" style="color: #ffffff">Home</a>
         <br>
-        <a href="add_details">Add Details</a>
+        <a href="about" style="color: #ffffff">About BristoLunch</a>
         <br>
-        <a href="deals">Today's Deals</a>
+        <a href="deals" style="color: #ffffff">Deals</a>
         <br>
-        <br>
-        <h1 style="font-size:50px;">Add Details</h1>
+        <h1 style="font-size:50px;"><div style="color:#ffffff;">Add Details</div></h1>
             
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -23,13 +21,13 @@
         {% endwith %}
         
             <form method="POST" name="detailform">
-                Name <input type="text" name="name">
+                <div style="color:#ffffff;">Name </div> <input type="text" name="name">
             <br>
             <br>
-                Address <input type="text" name="address">
+                <div style="color:#ffffff;">Address </div><input type="text" name="address">
             <br>
             <br>
-                <label for="cuisine">Cuisine </label>
+                <label for="cuisine"><div style="color:#ffffff;">Cuisine </div></label>
                 <select name="cuisine" id="cuisine">
                     <option value="African">African</option>   
                     <option value="Asian">Asian</option>   
@@ -55,18 +53,19 @@
                 </select>
             <br>
             <br>
-                <label for="price_range">Price Range </label>
+                <label for="price_range"><div style="color:#ffffff;">Price Range </div></label>
                 <select name="price_range" id="price_range">
                     <option value="£-££">£-££</option>   
                     <option value="££-£££">££-£££</option>   
                     <option value="£££-££££">£££-££££</option>
                     <option value="£££££+">£££££+</option>
+                </select>
             <br>
             <br>
-                Website <input type="text" name="webpage">
+                <div style="color:#ffffff;">Website </div><input type="text" name="webpage">
             <br>
             <br>
-                Opening Hours <input type="text" name="opening_times">
+                <div style="color:#ffffff;">Opening Hours </div><input type="text" name="opening_times">
             <br>
             <br>
             <br>

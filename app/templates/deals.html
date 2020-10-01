@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
-        <link rel="stylesheet" type="text/css" href="static/style.css">
         <meta charset="utf-8">
     </head>
-    <body>
-        <a href="about">About Bristolunch</a>
+    <body style= "background-color:#3b5773">
+        <a href="/" style="color: #ffffff">Home</a>
         <br>
-        <a href="add_details">Add Details</a>
+        <a href="about" style="color: #ffffff">About BristoLunch</a>
         <br>
-        <a href="deals">Today's Deals</a>
-        <h1></h1>
-        <p>Select Day</p>
-        <label for="days">Select Day</label>
+        <a href="add_details" style="color: #ffffff">Add Details</a>
+        <br>
+
+        <h1 style="font-size:50px;"><div style="color:#ffffff;">Search Deals</div></h1>
+        <br>
+        <label for="days"><div style="color:#ffffff;">Select Day</div</label>
         <select name="days" id="days">
         <option value="Monday">Monday</option>
         <option value="Tuesday">Tuesday</option>
@@ -24,11 +24,38 @@
         <option value="Sunday">Sunday</option>
         </select>
         <a href="about.html"></a> <br /><br />
-        <form name="searchform" method="POST">
-            Title: <input type="text" name="searchedplace"> <br /><br />
-            <br />OR<br />
-            Star-Rating: <input type="number" min="0" max="5" value="0"/>
-            <input type="submit" name="searchsubmitbutton">
+     
+        <form method="POST" name="detailform">
+            <div style="color:#ffffff;">Name </div> <input type="text" name="name">
+            <br>
+            <br>
+            <label for="cuisine"><div style="color:#ffffff;">Cuisine </div></label>
+            <select name="cuisine" id="cuisine">
+                <option value="African">African</option>   
+                <option value="Asian">Asian</option>   
+                <option value="British">British</option>
+                <option value="Burgers">Burgers</option>
+                <option value="Cafe">Cafe</option>
+                <option value="Chinese">Chinese</option>   
+                <option value="Carribean">Carribean</option>
+                <option value="Greek">Greek</option>
+                <option value="Halal">Halal</option>   
+                <option value="International">International</option>  
+                <option value="Indian">Indian</option>    
+                <option value="Italian">Italian</option>   
+                <option value="Japanese">Japanese</option>   
+                <option value="Korean">Korean</option>   
+                <option value="Lebanese">Lebanese</option>   
+                <option value="Mediterranean">Mediterranean</option>   
+                <option value="Mexican">Mexican</option> 
+                <option value="Pizza">Pizza</option>
+                <option value="Street_Food">Street_Food</option>  
+                <option value="Vegetarian">Other</option>
+                <option value="Other">Other</option>                       
+            </select>
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Submit">
         </form>
     </body>
 </html>
